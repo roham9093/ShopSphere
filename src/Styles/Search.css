@@ -1,0 +1,144 @@
+/* استایل برای کل بخش جستجو و بنر */
+.search-container {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* نوار جستجو */
+  .search-box {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+  }
+  
+  .search-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .search-button:hover {
+    background: #0056b3;
+  }
+  
+  /* بنر زیر جستجو */
+  .banner-search {
+    display: grid;
+    grid-template-areas:
+      "box1 box2"
+      "box3 box3"
+      "box4 box5";
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+  }
+  
+  .item-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #93A1B9;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .item-search img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 30px;
+    filter: sepia(3%) saturate(24%) hue-rotate(165deg);
+  }
+  .item-search p {
+    color: white;
+  }
+  
+  /* تنظیمات گرید برای هر باکس */
+  .item-search:nth-child(1) {
+    grid-area: box1;
+  }
+  
+  .item-search:nth-child(2) {
+    grid-area: box2;
+  }
+  
+  .item-search:nth-child(3) {
+    grid-area: box3;
+  }
+  
+  .item-search:nth-child(4) {
+    grid-area: box4;
+  }
+  
+  .item-search:nth-child(5) {
+    grid-area: box5;
+  }
+  
+  /* ریسپانسیو */
+  @media (max-width: 768px) {
+    .banner-search {
+      grid-template-areas:
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5";
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .tag {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tag:hover {
+    background-color: #0056b3;
+  }
+  

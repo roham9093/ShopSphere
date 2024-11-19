@@ -1,0 +1,157 @@
+.carousel-wrapper {
+    position: relative;
+    margin: 0 20px;
+}
+
+.carousel-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1B3264; /* رنگ عنوان */
+    margin-bottom: 20px;
+    padding-left: 15px;
+    text-align: left;
+}
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  
+
+  .show-all {
+    font-size: 1rem;
+    color: #40588e;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.carousel-container.dragging {
+    cursor: grabbing;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.card {
+    min-width: 250px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: none;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    background-color: #F3F8FC;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.icon {
+    position: absolute;
+    top: 10px;
+    font-size: 19px;
+    color: #9dbcff;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.heart-icon {
+    right: 10px;
+    top: 10px;
+}
+
+.bag-icon {
+    right: 10px;
+    top: 50px;
+}
+
+.heart-icon:hover {
+    color:red;
+    cursor: pointer;
+}
+.bag-icon:hover{
+    color: rgb(55, 229, 55);
+    cursor: pointer;
+}
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h4, .card-content h5 {
+    user-select: none;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 16px;
+}
+
+.new-price {
+    color: #1B3264;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #ddd; /* رنگ ستاره‌های خالی */
+}
+
+.star.filled {
+    color: #ffcc00; /* رنگ ستاره‌های پر شده (طلایی) */
+}
+
+/* انیمیشن حرکت کاروسل به سمت چپ */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.no-select {
+    user-select: none;
+}

@@ -1,0 +1,60 @@
+.container {
+    width: 100%;
+
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%; /* برای اطمینان از پر کردن عرض کامل صفحه */
+    z-index: 2000;
+    background-color: white;
+}
+
+.header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.bag-shop {
+    color: black;
+    font-size: 1.5rem;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+}
+
+.badge-style {
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-left: -4px;
+    margin-top: 24px;
+}
+
+
+.spacer {
+    flex: 1;
+}
+
+.menu {
+    color: black;
+    font-size: 1.5rem;
+    transition: color .3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ .bag-shop:hover , .menu:hover{
+    color: #244a8f;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,46 @@
+/* تنظیمات کلی برای نمایش ریسپانسیو و زیبا */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  .error-container h1 {
+    font-size: 5rem;
+    color: #ff6b6b;
+    margin: 0;
+  }
+  
+  .error-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .error-container p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 400px;
+  }
+  
+  .error-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .error-container button:hover {
+    background-color: #ff4c4c;
+  }
+  

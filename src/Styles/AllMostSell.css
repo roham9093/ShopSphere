@@ -1,0 +1,392 @@
+
+/* استایل پایه */
+.container {
+    width: 100%;
+    max-width: 1200px; /* حداکثر عرض برای محدود کردن در صفحه‌های بزرگ‌تر */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-all-most-sell {
+background-color: transparent;
+height: auto;
+}
+
+.header-title {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    max-width: 1200px;
+    background-color:white;
+    z-index: 1000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.cat, .filter {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    font-size: 18px;
+    color: #173e67;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.all-most-sell-icon {
+    font-size: 16px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.cat:hover .all-most-sell-icon, .filter:hover .all-most-sell-icon {
+    color: #007bff;
+}
+
+/* استایل‌های واکنش‌گرا برای دستگاه‌های کوچک‌تر */
+@media (max-width: 768px) {
+    .header-title {
+        padding: 10px;
+    }
+    .cat, .filter {
+        font-size: 16px;
+    }
+}
+
+/* استایل‌های واکنش‌گرا برای دستگاه‌های بسیار کوچک */
+@media (max-width: 576px) {
+    .header-title {
+        padding: 8px;
+    }
+    .cat, .filter {
+        font-size: 14px;
+    }
+    .all-most-sell-icon {
+        font-size: 14px;
+    }
+}
+
+
+
+/* استایل‌های کارت‌ها */
+.all-most-sell-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top:163px;
+  }
+  
+  .all-most-sell-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .all-most-sell-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .all-most-sell-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .all-most-sell-image-container img {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+
+  .all-most-sell-icon2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .all-most-sell-heart-icon,
+  .all-most-sell-bag-icon {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ff6f61;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .all-most-sell-heart-icon:hover,
+  .all-most-sell-bag-icon:hover {
+    background-color: #ff6f61;
+    color: #ffffff;
+    transform: scale(1.2);
+  }
+  
+  .all-most-sell-card-content {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .all-most-sell-stars-container {
+    margin-bottom: 10px;
+  }
+  
+  .star {
+    font-size: 14px;
+    color: #ffd700;
+  }
+  
+  .star.filled {
+    color: #ffcc00;
+  }
+  
+  .all-most-sell-card-content h4 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  .all-most-sell-old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .all-most-sell-new-price {
+    font-size: 16px;
+    color: #ff6f61;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+
+/* Overlay styling */
+.sort-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup styling */
+.sort-modal-popup {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Title styling */
+.sort-modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+/* List styling */
+.sort-options-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sort-option-item {
+  font-size: 16px;
+  color: #555;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.sort-option-item:hover {
+  background-color: #f5f5f5;
+  color: #000;
+  border-color: #ccc;
+}
+
+/* Mobile-first responsive styling */
+@media (max-width: 768px) {
+  .sort-modal-popup {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .sort-modal-title {
+    font-size: 18px;
+  }
+
+  .sort-option-item {
+    font-size: 14px;
+  }
+}
+
+/* Desktop-specific enhancements */
+@media (min-width: 768px) {
+  .sort-modal-popup {
+    max-width: 500px;
+  }
+
+  .sort-option-item {
+    padding: 14px 20px;
+    font-size: 18px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  
+
+/* استایل مدال */
+/* General modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  overflow-y: auto;
+  max-height: 97%;
+}
+
+/* Header styles */
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Filter categories */
+/* استایل کلی دسته‌بندی‌های فیلتر */
+.filter-category {
+  margin-bottom: 1.5rem;
+}
+
+.filter-category p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* تنظیمات لیست گزینه‌های فیلتر */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem; /* فاصله بین گزینه‌ها */
+  padding: 0;
+  list-style: none;
+}
+
+/* استایل برای آیتم‌های فیلتر */
+.filter-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.8rem;
+  background-color: #F2F7FC;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-item:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* استایل اختصاصی دایره رنگ‌ها */
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.color-circle:hover {
+  transform: scale(1.2);
+  border-color: #aaa;
+}
+
+/* استایل ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+  .filter-category p {
+    font-size: 1rem;
+  }
+
+  .filter-item {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .color-circle {
+    width: 25px;
+    height: 25px;
+  }
+}

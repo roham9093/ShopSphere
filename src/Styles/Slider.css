@@ -1,0 +1,74 @@
+/* استایل اسلایدر */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height:60vh;
+    background-color: #F2F7FC;
+    cursor: grab; /* شکل موس به حالت دست باز */
+    user-select: none; /* غیرفعال کردن انتخاب متن */
+}
+.slider:active {
+    cursor: grabbing; /* حالت دست بسته در زمان درگ */
+}
+/* تنظیمات اسلایدها */
+.slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide.active {
+    display: flex;
+    animation: fade 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slide h1 {
+    color: #1B3264;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+/* انیمیشن فید برای تغییر اسلاید */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* استایل نقاط پایین اسلایدر */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 4px;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+}
+
+.dot.active {
+    background-color: #1B3264;
+}
+.slide img,
+.slide h1 {
+    user-select: none; /* غیرفعال کردن انتخاب */
+}

@@ -136,10 +136,13 @@ Here’s a sample **README.md** file tailored for your project:
 ## Screenshots
 
 ### Desktop View:
-![Desktop View](https://via.placeholder.com/800x400?text=Desktop+View)
+
+![Untitled](https://github.com/user-attachments/assets/e4feaae3-3f5c-46af-b589-96b2bc49cbf2)
+
 
 ### Mobile View:
-![Mobile View](https://via.placeholder.com/400x800?text=Mobile+View)
+![Untitled2](https://github.com/user-attachments/assets/c747667b-dbf3-40fa-84a9-d4abd4c70660)
+
 
 ---
 
